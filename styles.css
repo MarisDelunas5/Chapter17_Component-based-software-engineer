@@ -1,0 +1,17 @@
+footer{
+    background-color: #2b4c55;
+    color: white;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-style: italic;
+}
+
+#end{
+    color: yellow;
+    font-weight: bold;
+}
