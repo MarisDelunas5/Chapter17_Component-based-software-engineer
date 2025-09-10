@@ -1,0 +1,17 @@
+footer{
+    background-color: rgb(196, 221, 230);
+    color: white;
+    text-align: center;
+    font-family: serif;
+}
+
+footer > h1{
+    color: rgb(135, 131, 131);
+    font-weight: lighter;
+    
+}
+ footer > p{
+    color: rgb(26, 26, 26);
+    font-style: normal;
+ 
+ }
