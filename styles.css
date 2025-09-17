@@ -103,6 +103,6 @@ footer{
 }
 
 .end{
-    color: yellow;
+    color: var(--primary);
     font-weight: bold;
 }
