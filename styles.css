@@ -1,5 +1,97 @@
+:root{
+    --primary: #07beb8;
+    --secondary: #68d8d6;
+    --tertiary: #c4fff9;
+    --light: #e0f9f7;
+    --dark: #070909;
+}
+
+@font-face{
+    font-family: "Helvetica";
+    src: url('font/Helvetica.ttf');
+}
+
+@font-face {
+    font-family: 'space_truckin';
+    src: url('font/space_truckin.ttf');
+}
+
+@font-face {
+    font-family: 'SoulDaisy';
+    src: url('font/SoulDaisy.otf');
+}
+
+body{
+    background-color: var(--tertiary);
+    font-family: 'Helvetica';
+}
+
+main{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.title{
+    background-color: var(--primary);
+    color: var(--light);
+    font-family: 'space_truckin';
+    text-align: left;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: 1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    margin: 20px;
+    border-radius: 16px;
+}
+
+.img{
+    display: block;
+    margin:auto;
+    border-style: dotted;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.content{
+    background-color: var(--secondary);
+    border-style: groove;
+    border-radius: 15px;
+    border-color: #080102;
+    width: auto;
+    height: fit-content;
+    text-align: justify;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mouse{
+    height: 40px;
+    width: 40px;
+    border-radius: 99px;
+}
+
+/* mouse icon */
+.mouse_con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 15%;
+}
+
+/* mouse icon */
+
 footer{
-    background-color: #2b4c55;
+    background-color: var(--dark);
     color: white;
     margin-left: -8px;
     margin-right: -8px;
@@ -7,11 +99,10 @@ footer{
     padding-top: 15px;
     padding-bottom: 15px;
     text-align: center;
-    font-family: 'Trebuchet MS';
-    font-style: italic;
+    font-family: 'SoulDaisy';
 }
 
-#end{
+.end{
     color: yellow;
     font-weight: bold;
 }

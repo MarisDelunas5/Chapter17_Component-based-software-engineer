@@ -6,11 +6,13 @@
     <title>Chapter 17.1</title>
     <link rel="stylesheet" href="styles.css">
   </head>
+
+  <h1 class="title">Chapter 17.1 Components and component models</h1>
+
+
   <body>
     <main>
-      <section>
-        <h1>Chapter 17.1 Components and component models</h1>
-
+      <section class="content">
         <p>
           There is general agreement in the CBSE community that a component is
           an independent software unit that can be composed with other
@@ -57,27 +59,23 @@
           What the above definitions have in common is that they agree that
           components are independent, and that they are the fundamental unit of
           composition in a system. In my view, a better definition of a
-          component can be derived by combining these
+          component can be derived by combining these proposals.
         </p>
 
         <h4>Chapter 17 Component-based software engineering</h4>
       </section>
 
       <!--Table-->
-      <img src="png/17.1.png" alt="Component characteristics table" />
+      <img class="img" src="png/17.1.png" alt="Component characteristics table" />
       <!--Table-->
 
-      <section>
+      <section class="content">
         <!--Figure Name-->
         <section>
           <b>Figure 17.1</b>
           <p>Component characteristics</p>
         </section>
-        <!--Figure Name-->
-        <p>
-          proposals. Figure 17.1 shows what I consider to be the essential
-          characteristics of a component as used in CBSE.
-        </p>
+
         <p>
           A useful way of thinking about a component is as a provider of one or
           more services. When a system needs a service, it calls on a component
@@ -109,16 +107,12 @@
         </ol>
       </section>
 
-      <!---->
-      <section>
-        <p>17.1</p>
-        <p>Components and component models</p>
-      </section>
-      <!---->
+      <section class="content">
+        <i>17.1</i>
+        <i>Components and component models</i>
 
-      <section>
-        <article>
-          <img src="png/mouse_icon.png" />
+        <article class="mouse_con">
+          <img class="mouse"  src="png/mouse_icon.png"/>
           <h5>Component and objects</h5>
         </article>
 
@@ -136,7 +130,7 @@
         >
       </section>
 
-      <section>
+      <section class="content">
         <p>
           Components have two related interfaces, as shown in Figure 17.2. These
           interfaces reflect the services that the component provides and the
@@ -178,7 +172,7 @@
           identifiers, locations, and so on
         </p>
 
-        <img src="png/r-p_interface.png" alt="Component interface" />
+        <img class="img" src="png/r-p_interface.png" alt="Component interface" />
         <!---->
         <section>
           <b>Figure 17.2</b>
@@ -187,13 +181,10 @@
         <!---->
       </section>
 
-      <section>
-        <p>Chapter 17</p>
-        <p>Component-based software engineering</p>
-      </section>
+      
 
-      <section>
-        <img src="png/data_collector.png" alt="Data collection component" />
+      <section class="content">
+        <img class="img" src="png/data_collector.png" alt="Data collection component" />
 
         <!---->
         <article>
@@ -222,8 +213,8 @@
         </p>
       </section>
 
-      <section>
-        <h3><font color="blue">17.1.1 Component models</font></h3>
+      <section class="content">
+        <h3>17.1.1 Component models</h3>
         <p>
           A component model is a definition of standards for component
           implementation, documentation, and deployment. These standards are for
@@ -251,7 +242,7 @@
             component interfaces. For web services, this is WSDL, which I
             discuss in
           </li>
-          <img src="png/f2.png" alt="" />
+          <img class="img" src="png/f2.png" alt="" />
           <p>
             Chapter 19; EJB is Java-specific so Java is used as the interface
             definition lan guage; in .NET, interfaces are defined using the
@@ -296,25 +287,19 @@
             Inevitably, as new requirements emerge, components will have to be
             changed or replaced. The component model may therefore include rules
             governing when and how component replacement is allowed. Finally,
-            the component model may
+            the component model may define the component documentation that should be produced. This is used to find the component and to decide whether it is appropriate.
           </li>
           <p>Inevitably, as new requirements emerge, components will have to be changed or replaced. The component model may therefore include rules governing when and how component replacement is allowed. Finally, the component model may</p>
-          <img src="png/support.png" alt="">
-          <p>define the component documentation that should be produced. This is used to find the component and to decide whether it is appropriate.</p>
+          <img class="img" src="png/support.png" alt="">
         </ol>
+        <i>17.1</i>
+        <i>Components and component models</i>
       </section>
 
-      <section>
-        <p>17.1</p>
-        <p>Components and component models</p>
-      </section>
-
-      <section>
+      <section class="content">
         <b>Figure 17.5</b>
         <p>Middleware services defined in a component model</p>
-      </section>
 
-      <section>
         <p> For components that are implemented as program units rather than external services, the component model sets out the services to be provided by the middleware that supports the executing components. Weinreich and Sametinger (2001) use the analogy of an operating system to explain component models. An operating system provides a set of generic services that can be used by applications. A component model implementation provides comparable shared services for components. Figure 17.5 shows some of the services that may be provided by an implementation of a component model.</p>
         <p>The services provided by a component model implementation fall into two categories:</p>
 
@@ -327,18 +312,15 @@
         <p>Containers are large and complex and, when you deploy a component in a container, you get access to all middleware services. However, simple components may not need all of the facilities offered by the supporting middleware. The approach taken in web services to common service provision is therefore rather different. For web services, standards have been defined for common services such as transaction management and security and these standards have been implemented as program libraries. If you are implementing a service component, you only use the common services that you need.</p>
       </section>
 
-      <section>
-        <b>17.2</b>
-        <p>CBSE processes</p>
-      </section>
     </main>
 
     <footer>
-      <h4 id="end">End of Chapter 17 Component-based software engineering</h4>
+      <h4 class="end">End of Chapter 17 Component-based software engineering</h4>
       <p>Figure 17.1 Components and component models</p>
       <p>Figure 17.2 Component interfaces</p>
       <p>Figure 17.3 A model of a data collector component</p>
       <p>Figure 17.5 Middleware services defined in a component model</p>
+      <h5 class="end">Coded by: Bautista, Marc Loyd</h5>
     </footer>
   </body>
 </html>
