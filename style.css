@@ -7,14 +7,35 @@
 }
 
 @font-face {
-  font-family: myFirstFont;
-  src: url(sansation_light.woff);
+  font-family: 'Super Trend';
+  src: url('fonts/Super Trend.ttf');
+  
+}
+
+@font-face {
+  font-family: 'Oups';
+  src: url('fonts/Oups.otf');
+
+}
+
+@font-face {
+  font-family: 'Playful';
+  src: url('fonts/Playful Swollen.otf');
+  
+}
+
+@font-face {
+  font-family: 'Scribbles';
+  src: url('fonts/ScribblesJE.ttf');
   
 }
 
 body{
   background-color: var(--primary);
   padding: 10px;
+  font-family: "Super Trend"
+  
+  
 }
 
 
@@ -26,7 +47,7 @@ nav{
   padding: 3px;
   background-color: var(--light);
   color: #000;
-  font-family: Georgia, 'Times New Roman', Times, serif;  
+  font-family: "Oups"  
     
 
 
@@ -39,7 +60,8 @@ nav{
     text-align: center;
     width: 200;
     padding: 10px;
-    color: antiquewhite;
+    color: #c5d6c6;
+    font-family: "Super Trend"
       
 
 }
@@ -56,6 +78,7 @@ nav{
   width: 300px;
   text-align: center;
   background-color: var(--light);
+  font-family: "Super Trend"
 
 
 }
@@ -77,14 +100,18 @@ nav{
   background-color: var(--light);
   border-radius: 15px;
   margin-bottom: 50px;
-
 }
+  
+/* .components{
+  border-style:inset;
+  border-color: black;
+  margin-top: 40px;
+  padding: 10px ;
+  background-color: var(--light);
+  border-radius: 15px;
+  margin-bottom: 50px;
 
-.contents{
-
-  text-align: left;
-
-}
+} */
 
 
 
