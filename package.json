@@ -1,6 +1,25 @@
 {
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.14",
-    "tailwindcss": "^4.1.14"
-  }
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  },
+  "name": "chapter17_component-based-software-engineer",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarisDelunas5/Chapter17_Component-based-software-engineer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarisDelunas5/Chapter17_Component-based-software-engineer/issues"
+  },
+  "homepage": "https://github.com/MarisDelunas5/Chapter17_Component-based-software-engineer#readme"
 }

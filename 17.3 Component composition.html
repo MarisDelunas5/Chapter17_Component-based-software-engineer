@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Component-based software engineering</title>
-    <link rel="stylesheet" href="17.3.css">
+    <link href="./src/output.css" rel="stylesheet">
 </head>
 <body>
 
     
-    <h1 class="title">COMPONENT POSITION</h1>
+    <header><h1 class="maris">COMPONENT POSITION</h1></header>
 
-      <div class="class"><p>Component composition is the process of integrating components with each other, and
+
+      <div class="maris-1"> Component composition is the process of integrating components with each other, and
      with specially written ‘glue code’ to create a system or another component. There are
      several different ways in which you can compose components, as shown in Figure 17.10.
       From left to right these diagrams illustrate sequential composition, hierarchical composition and additive composition. In the discussion below, I assume that you are composing
      two components (A and B) to create a new component:</p>
-
     <p>1. Sequential composition is situation (a) in Figure 17.10. You create a new component from 2 existing components by calling the existing components in sequence.
 You can think of the composition as a composition of the ‘provides interfaces’.
 That is, the services offered by component A are called and the results returned
@@ -41,10 +41,11 @@ when two or more components are put together (added) to create a new component,<
 <center><img src= "1529602317389.jpg" alt="Centered Image"></center> 
 
 
-<section div class="mary">Figure 17.10 Types of
+<section div class="maris-3">Figure 17.10 Types of
 component composition</section> </div>
 
-<div class="sample1"><p>which combines their functionality. The ‘provides’ interface and ‘requires’ interface of the new component is a combination of the corresponding interfaces in
+<div class="maris-4">
+    <p>which combines their functionality. The ‘provides’ interface and ‘requires’ interface of the new component is a combination of the corresponding interfaces in
 components A and B. The components are called separately through the external
 interface of the composed component. A and B are not dependent and do not call
 each other. This type of composition may be used with components that are program units or components that are services.</p>
@@ -70,9 +71,9 @@ converts one interface to another. The precise form of the adaptor depends on th
 
 <center><img src= "Screenshot 2025-09-03 093836.png" alt="Centered Image"></center>
 
-<section div class="mary2">Figure 17.11Components with incompatible interfaces</section></div>
+<section div class="maris-6">Figure 17.11Components with incompatible interfaces</section></div>
 
-<div class="sample2"> of composition. Sometimes, as in the next example, the adaptor takes a result from one
+<div class="maris-7"> of composition. Sometimes, as in the next example, the adaptor takes a result from one
 component and converts it into a form where it can be used as an input to another. In
 other cases, the adaptor may be called by component A as a proxy for component B.
 This situation occurs if A wishes to call B but the details of the ‘requires’ interface of
@@ -105,9 +106,9 @@ mapper.displayMap(postCode, 10000) ;</p>
 
 <center><img src= "Screenshot 2025-09-03 095556.png" alt="Centered Image"></center>
 
-<section div class="mary3"> Figure 17.12 Anadaptor linking a datacollector and a sensor</section> </div>
+<section div class="maris-9"> Figure 17.12 Anadaptor linking a datacollector and a sensor</section> </div>
 
-<div class="sample3"> Another case in which an adaptor component may be used is in hierarchical composition, where one component wishes to make use of another but there is an incompatibility between the ‘provides’ interface and ‘requires’ interface of the components
+<div class="maris-10"> Another case in which an adaptor component may be used is in hierarchical composition, where one component wishes to make use of another but there is an incompatibility between the ‘provides’ interface and ‘requires’ interface of the components
 in the composition. I have illustrated the use of an adaptor in Figure 17.12 where an
 adaptor is used to link a data collector and a sensor component. These could be used
 in the implementation of a wilderness weather station system, as discussed in
@@ -136,11 +137,9 @@ semantically compatible.</p>
 <p>To illustrate this problem, consider the composition shown in Figure 17.13. These
 components are used to implement a system that downloads images from a digital
 camera and stores them in a photograph library. The system user can provide
-additional information to describe and catalog the photograph. To avoid clutter. </p></div>
+additional information to describe and catalog the photograph. To avoid clutter. </p>
 
-<center><img src= "SScreenshot 2025-09-03 100240.png" alt="Centered Image"></center>
-
-<div class="sample4"> I have not shown all interface methods here. Rather, I simply show the methods that
+<p>I have not shown all interface methods here. Rather, I simply show the methods that
 are needed to illustrate the component documentation problem. The methods in the
 interface of Photo Library are:</p>
 <ol>public void addItem (Identifier pid ; Photograph p; CatalogEntry
@@ -170,10 +169,10 @@ models; it allows you to express predicates that must always be true, that must 
 
 <center><img src= "Screenshot 2025-09-03 100838.png" alt="Centered Images"></center>
 
-<section div class="mary4"> Figure 17.14 The OCL description of the Photo Library interface</section></div>
+<section div class="maris-12"> Figure 17.14 The OCL description of the Photo Library interface</section></div>
 
 
-<div class="sample5">true before a method has executed; and that must be true after a method has executed. These are invariants, pre-conditions, and post-conditions. To access the value
+<div class="maris-13">true before a method has executed; and that must be true after a method has executed. These are invariants, pre-conditions, and post-conditions. To access the value
 of a variable before an operation, you add @pre after its name. Therefore, using age
 as an example:</p>
 <p>age = age@pre + 1</p>
@@ -187,8 +186,8 @@ suggests that using Design by Contract is essential if we are to develop trusted
 <p>Figure 17.14 includes a specification for the addItem and delete methods in
 Photo Library. The method being specified is indicated by the keyword context and
 the pre- and post-conditions by the keywords pre and post. The pre-conditions for
-addItem state that:</p>
-<p>1. There must not be a photograph in the library with the same identifier as the
+addItem state that:</p></div>
+<div class="maris-14">1. There must not be a photograph in the library with the same identifier as the
 photograph to be entered.
 </p>
 <p>2. The library must exist—assume that creating a library adds a single item to it so
@@ -198,9 +197,9 @@ that the size of a library is always greater than zero.</p>
 <p>If you retrieve using the same identifier, then you get back the photograph
 that you added.</p>
 <p>If you look up the catalogue using that identifier, you get back the catalogue
-entry that you made.</p>
+entry that you made.</p></div>
 
-<p>The specification of delete provides further information. The pre-condition states
+<div class="maris-15">p>The specification of delete provides further information. The pre-condition states
 that to delete an item, it must be in the library and, after deletion, the photo can no
 longer be retrieved and the size of the library is reduced by 1. However, delete does
 not delete the catalogue entry—you can still retrieve it after the photo has been
@@ -209,14 +208,16 @@ deleted. The reason for this is that you may wish to maintain information in the
 potential conflicts between functional and non-functional requirements, the need to
 deliver a system as quickly as possible and the need to create a system that can
 evolve as requirements change. The decisions where you may have to take trade-offs
-into account are:</p>
-<p>1. What composition of components is most effective for delivering the functional
+into account are:</p></div>
+
+<div class="maris-16">1. What composition of components is most effective for delivering the functional
 requirements for the system?</p>
 <p>2. What composition of the components will make it easier to adapt the composite
 component when its requirements change?</p>
 <p>3. What will be the emergent properties of the composed system? These are properties such as performance and dependability. You can only assess these once
-the complete system is implemented.</p>
-<p>Unfortunately, there are many situations where the solutions to the composition
+the complete system is implemented.</p></div>
+
+<div class="maris-17">Unfortunately, there are many situations where the solutions to the composition
 problems may conflict. For example, consider a situation such as that illustrated in
 Figure 17.15, where a system can be created through two alternative compositions.
 The system is a data collection and reporting system where data is collected from
@@ -230,13 +231,13 @@ system could be replaced and, if reports are required that the current reporting
 change the data management component.</p>
 <p>In composition (b), a database component with built-in reporting facilities (e.g.,
 Microsoft Access) is used. The key advantage of composition (b) is that there are fewer
-components, so this will be a faster implementation because there are no component</p> </div>
+components, so this will be a faster implementation because there are no component.</p> </div>
 
-<section div class="mary5"> Figure 17.15 Data collection and report generation components</section></div>
+<section div class="maris-18"> Figure 17.15 Data collection and report generation components</section></div>
 
 <center><img src= "Screenshot 2025-09-03 101739.png" alt="Centered Images"></center>
 
-<div class="sample6">communication overheads. Furthermore, data integrity rules that apply to the database
+<div class="maris-19">communication overheads. Furthermore, data integrity rules that apply to the database
 will also apply to reports. These reports will not be able to combine data in incorrect
 ways. In composition (a), there are no such constraints so errors in reports could occur.</p>
 <p>In general, a good composition principle to follow is the principle of separation of
@@ -254,9 +255,9 @@ or three separate components. Furthermore, there may be dependability or perform
 
 
 <footer> 
-    <h1> R E F E R E N C E S</h1>
+    <div class="maris-20"> R E F E R E N C E S</h1></div>
     
-     <p>Mili, H., Mili, A., Yacoub, S. and Addy, E. (2002). Reuse-based Software Engineering. New York: John
+     <div class="footer">Mili, H., Mili, A., Yacoub, S. and Addy, E. (2002). Reuse-based Software Engineering. New York: John
       Wiley & Sons.</p>
      <p>Pope, A. (1997). The CORBA Reference Guide: Understanding the Common Object Request Broker
       Architecture. Harlow, UK: Addison-Wesley.</p>
@@ -267,7 +268,7 @@ or three separate components. Furthermore, there may be dependability or perform
      MDA. Boston: Addison-Wesley.</p>
      <p>Weinreich, R. and Sametinger, J. (2001). ‘Component Models and Component Services: Concepts and
      Principles’. In Component-Based Software Engineering. Heineman, G. T. and Councill, W. T. (ed.).
-     Boston: Addison-Wesley, 33–48.</p>
+     Boston: Addison-Wesley, 33–48.</p></div>
 </footer>
 
 
