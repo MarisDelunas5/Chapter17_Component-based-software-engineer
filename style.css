@@ -1,0 +1,117 @@
+:root{
+  --primary: #87986a;
+  --dark: #111d13;
+  --light: #cfe1b9;
+  --complimentary: #5D415B;
+
+}
+
+@font-face {
+  font-family: 'Super Trend';
+  src: url('fonts/Super Trend.ttf');
+  
+}
+
+@font-face {
+  font-family: 'Oups';
+  src: url('fonts/Oups.otf');
+
+}
+
+@font-face {
+  font-family: 'Playful';
+  src: url('fonts/Playful Swollen.otf');
+  
+}
+
+@font-face {
+  font-family: 'Scribbles';
+  src: url('fonts/ScribblesJE.ttf');
+  
+}
+
+body{
+  background-color: var(--primary);
+  padding: 10px;
+  font-family: "Super Trend"
+  
+  
+}
+
+
+
+
+nav{
+
+  text-align: center;
+  padding: 3px;
+  background-color: var(--light);
+  color: #000;
+  font-family: "Oups"  
+    
+
+
+}
+
+.title {
+    background-color: var(--dark);
+    padding: 20px 10px;
+    /* border-radius: 25%; */
+    text-align: center;
+    width: 200;
+    padding: 10px;
+    color: #c5d6c6;
+    font-family: "Super Trend"
+      
+
+}
+
+.topics{
+  /* background-color: var(--light); */
+  border-style:groove;
+  border-color: black;
+  padding: 20px 10px;
+  border-radius: 25%;
+  text-align: left;
+  margin-right: 400px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  background-color: var(--light);
+  font-family: "Super Trend"
+
+
+}
+
+.intro{
+  border-style:inset;
+  border-color: black;
+  margin-top: 40px;
+  padding: 10px ;
+  background-color: var(--light);
+  border-radius: 15px;
+}
+
+.essential{
+  border-style:inset;
+  border-color: black;
+  margin-top: 40px;
+  padding: 10px ;
+  background-color: var(--light);
+  border-radius: 15px;
+  margin-bottom: 50px;
+}
+  
+/* .components{
+  border-style:inset;
+  border-color: black;
+  margin-top: 40px;
+  padding: 10px ;
+  background-color: var(--light);
+  border-radius: 15px;
+  margin-bottom: 50px;
+
+} */
+
+
+
