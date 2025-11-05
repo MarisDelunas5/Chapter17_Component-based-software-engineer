@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.google.com/share?selection.family=Lexend+Deca:wght@100..900');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -127,3 +127,281 @@ body, .loyd_content, .loyd_header, .loyd_footer {
     filter: brightness(0.85) contrast(1.05);
   }
 }
+  --color-blue: #26667f;
+  --color-mint-green: #ddf4e7;
+  --color-white: #ffffff;
+  --color-dark-blue: #124170;
+  --color-green: #67c090;
+
+  /* font */
+  --font-main: "Red Hat Display", sans-serif;
+  --font-dancing: "Dancing Script", cursive;
+  --font-lexend: "Lexend Deca", sans-serif;
+
+  /* animations */
+  --animate-slide-in-right: slideInRight 0.8s ease-out forwards;
+  --animate-card-pop: cardPop 0.6s ease-out forwards;
+  --animate-fade-in-up: fadeInUp 0.6s ease-out forwards;
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes cardPop {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+/* color changing */
+@keyframes flowGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+
+@layer components {
+  .top-nav {
+    @apply bg-gradient-to-r from-blue to-dark-blue sticky top-0 z-50 border-b border-green/30 shadow-sm;
+
+  }
+/* apply bg-blue px-6 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8 mt-0 shadow-md rounded-b-3xl; */
+  .nav-container {
+    @apply max-w-6xl mx-auto px-8 py-4 flex justify-between items-center ;
+  }
+
+  .nav-brand {
+    @apply text-white font-dancing text-2xl font-bold tracking-wide hover:text-mint-green transition-all duration-300 hover:scale-[1.03];
+  }
+
+  .nav-links {
+    @apply flex gap-7;
+  }
+
+  .nav-link {
+    @apply relative text-white/90 font-lexend text-sm md:text-base transition-all duration-300 hover:text-mint-green;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 bottom-0 w-0 h-[2px] bg-mint-green transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  body {
+    @apply bg-mint-green text-blue font-main leading-relaxed m-0;
+  }
+
+  .title {
+    @apply text-center text-3xl font-bold text-white mb-1 lg:text-4xl font-dancing;
+  }
+
+  .main-header {
+  background: linear-gradient(90deg, #124170, #26667f, #67c090);
+  background-size: 200% 200%;
+  animation: flowGradient 6s ease infinite;
+  @apply text-[#ddf4e7] shadow-lg px-6 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8;
+}
+
+  .topics {
+    @apply bg-green text-dark-blue p-8 rounded-2xl mt-10 shadow-md sm:p-10 lg:p-12;
+  }
+
+  .topics h2 {
+    @apply text-xl mb-6 text-white lg:text-2xl lg:mb-7 font-dancing;
+  }
+
+  .content {
+    background: linear-gradient(90deg, #124170, #26667f, #67c090);  
+    /* animation: flowGradient 6s ease infinite;
+    background-size: 100% 100%; */
+    @apply bg-green text-left mx-auto max-w-4xl px-8 py-6 text-dark-blue sm:px-10 sm:py-8 lg:px-12 lg:py-10 rounded-xl shadow-md;
+  }
+
+  .content h4 {
+    @apply text-xl mb-5 text-blue font-bold mt-5 lg:text-2xl lg:mb-6 lg:mt-7 font-dancing;
+  }
+
+  .content p {
+    @apply mb-5 text-base leading-relaxed lg:mb-6 lg:text-lg;
+  }
+
+  .content ol,
+  .content ul {
+    @apply mb-6 pl-6 space-y-3 lg:mb-7 lg:pl-8 lg:space-y-4;
+  }
+
+  .content li {
+    @apply leading-relaxed text-base lg:text-lg;
+  }
+
+  footer {
+    @apply bg-green text-dark-blue text-center py-8 mt-10 rounded-b-2xl sm:py-10 lg:py-12;
+  }
+
+  .container {
+    @apply mt-0 mx-auto mb-10 px-0 py-0 rounded-3xl shadow-xl max-w-5xl bg-white overflow-hidden sm:mb-12 lg:mb-14;
+  }
+
+  .objectives-container {
+    @apply bg-white px-8 py-8 mb-8 rounded-2xl shadow-lg border border-green/60 max-w-4xl mx-auto sm:px-10 sm:py-10 sm:mb-10 lg:px-12 lg:py-12;
+  }
+
+  .objectives-title {
+    @apply text-dark-blue text-2xl font-bold mb-5 text-center pb-3 border-b border-green/70 lg:text-3xl lg:mb-6 lg:pb-4 font-dancing;
+  }
+
+  .objectives-intro {
+    @apply text-dark-blue text-base mb-6 text-center leading-relaxed lg:text-lg lg:mb-8;
+  }
+
+  .objectives-list {
+    @apply list-none p-0 mb-6 space-y-4 lg:mb-8 lg:space-y-5;
+  }
+
+  .objectives-list li {
+    @apply bg-gray-50 rounded-lg border-l-4 border-green px-6 py-4 text-base lg:px-8 lg:py-5 lg:text-lg;
+  }
+
+  .intro,
+  .essential,
+  .components {
+    @apply bg-white px-8 py-8 rounded-2xl shadow-md mb-8 sm:px-10 sm:py-10 sm:mb-10 lg:px-12 lg:py-12;
+  }
+
+  .intro h4,
+  .essential h4,
+  .components h4 {
+    @apply text-xl mb-5 text-blue font-bold lg:text-2xl lg:mb-6 font-dancing;
+  }
+
+  .intro p,
+  .essential p,
+  .components p {
+    @apply mb-5 text-base leading-relaxed text-dark-blue lg:mb-6 lg:text-lg;
+  }
+
+  .essential ol,
+  .components ol {
+    @apply mb-6 pl-6 space-y-3 text-dark-blue lg:mb-8 lg:pl-8 lg:space-y-4;
+  }
+
+  .essential li,
+  .components li {
+    @apply text-base leading-relaxed lg:text-lg;
+  }
+
+  .footer-container {
+    @apply mt-0 bg-blue;
+  }
+
+  .footer-nav {
+    @apply text-center py-6;
+  }
+
+  .footer-nav h4 {
+    @apply text-xl font-bold mb-5 text-white lg:text-2xl lg:mb-6 font-lexend;
+  }
+
+  .footer-links {
+    @apply list-none p-0 space-y-3 mb-5 lg:space-y-4 lg:mb-6;
+  }
+
+  .footer-links li {
+    @apply py-1 text-white text-base lg:text-lg font-lexend;
+  }
+
+  .footer-nav p {
+    @apply mt-5 pt-5 border-t border-white/30 text-white font-semibold lg:mt-6 lg:pt-6 font-lexend;
+  }
+}
+
+
+
+  /* landing page */
+
+  .landing-container {
+    @apply mx-auto mt-8 sm:mt-12 lg:mt-16 mb-8 max-w-2xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .landing-header {
+    @apply bg-blue p-6 sm:p-8 rounded-2xl shadow-lg text-center transition-all duration-700 hover:shadow-2xl transform hover:-translate-y-1;
+  }
+
+  .landing-title {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-mint-green mb-2 font-dancing transition-all duration-500 hover:scale-105;
+  }
+
+  .landing-subtitle {
+    @apply text-green text-base sm:text-lg font-semibold;
+  }
+
+  .landing-nav-section {
+    @apply mt-6 sm:mt-8 space-y-4 sm:space-y-6;
+  }
+
+  .landing-card {
+    @apply block bg-white/80 hover:bg-white p-4 sm:p-6 rounded-xl shadow-md transition-all duration-300 hover:scale-105 text-center border-2 border-transparent hover:border-green/30;
+  }
+
+  .landing-card-title {
+    @apply text-dark-blue font-bold text-lg sm:text-xl mb-2 font-lexend;
+  }
+
+  .landing-card-desc {
+    @apply text-dark-blue text-sm sm:text-base opacity-90;
+  }
+
+  .landing-action-section {
+    @apply text-center mt-6 sm:mt-8;
+  }
+
+  .landing-button {
+    @apply inline-block bg-dark-blue hover:bg-[#0d2a4a] text-mint-green font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+
+  .landing-footer {
+    @apply text-center mt-8 sm:mt-12;
+  }
+
+  .landing-footer-text {
+    @apply text-blue font-semibold text-sm sm:text-base;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-card-pop {
+    animation: cardPop 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
